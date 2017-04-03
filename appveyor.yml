@@ -27,6 +27,4 @@ on_success:
   # Setup git
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
-  - git add --all  
-  - git commit -m "It Works!!!"
   - git pull --rebase origin master
