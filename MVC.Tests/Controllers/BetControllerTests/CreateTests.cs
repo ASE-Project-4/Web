@@ -61,7 +61,7 @@ namespace MVC.Tests.Controllers.BetControllerTests
             MyWork.Received(1).Complete();
         }
 
-        [Test]
+        /*[Test]
         public void Create_InputFromViewModel_StoredInRepository()
         {
             // Register a lobby with the mock.
@@ -100,6 +100,6 @@ namespace MVC.Tests.Controllers.BetControllerTests
             Assert.That(bet.StartDate, Is.EqualTo(DateTime.Parse(startDate)));
             Assert.That(bet.StopDate, Is.EqualTo(DateTime.Parse(stopDate)));
             // TODO: Extend.
-        }
+        }*/
     }
 }
