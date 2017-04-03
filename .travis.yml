@@ -1,5 +1,0 @@
-language: csharp
-mono: latest
-solution: LocalBet.sln
-install:
-  - nuget restore LocalBet.sln
