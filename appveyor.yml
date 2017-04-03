@@ -24,16 +24,11 @@ before_build:
 #  - codecov -f "coverage.xml"
  
 on_success:
-  ##Magnus
-  ## Setup git
-  #- git config --global credential.helper store
-  #- ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
-  ## Force checkout of master.
-  #- git checkout -fq master
-  ## Merge, using only fast forward.
-  #- cmd: git merge -q --ff-only %APPVEYOR_REPO_COMMIT%
-  #- cmd: git push
-- git config --global credential.helper store
-- ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
-- git commit -m "Test"
-- git pull --rebase origin release
+  # Setup git
+  - git config --global credential.helper store
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+  # Force checkout of master.
+  - git checkout -fq master
+  # Merge, using only fast forward.
+  - cmd: git merge -q --ff-only %APPVEYOR_REPO_COMMIT%
+  - cmd: git push
