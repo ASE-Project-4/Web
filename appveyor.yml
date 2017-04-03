@@ -28,7 +28,10 @@ on_success:
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
  # Force checkout of master.
+  - git checkout -fq release
+  - git stash
   - git checkout -fq master
+  - git stash
   # Merge, using only fast forward.
   - cmd: git merge -q --ff-only %APPVEYOR_REPO_COMMIT%
   - cmd: git push
