@@ -30,5 +30,5 @@ on_success:
  # Force checkout of master.
   - git checkout -fq master
   # Merge, using only fast forward.
-  - cmd: git merge -q --ff-only %APPVEYOR_REPO_COMMIT%
+  - cmd: git merge #-q --ff-only %APPVEYOR_REPO_COMMIT%
   - cmd: git push
