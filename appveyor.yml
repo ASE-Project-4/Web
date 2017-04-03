@@ -9,11 +9,11 @@ environment:
     secure: qk5xX/i8yy/quJxD4TftDWgKbn+/5sApifI35hcQmFy7PF2fu8XAxpX1/GD3Qb2C
 
 build:
-  project: Test.sln
+  project: LocalBet.sln
   verbosity: quiet
 
 before_build:
-  - nuget.exe restore Test.sln
+  - nuget.exe restore LocalBet.sln
 
 #test_script:
 #  - .\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:"nunit3-console.exe" -targetargs:"MVC.Tests\bin\debug\MVC.Tests.dll DAL.Tests\bin\debug\DAL.Tests.dll" -output:"coverage.xml"
